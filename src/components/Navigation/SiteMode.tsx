@@ -38,7 +38,7 @@ const SiteMode = ({ setLogo }: { setLogo: (image: string) => void }) => {
       className='text-primary-500 dark:text-slate-50 cursor-pointer text-2xl'
       onClick={switchMode}
     >
-      {isDarkMode ? <FaSun /> : <FaMoon />}
+      {isDarkMode ? <FaSun title='Light Mode' /> : <FaMoon title='Dark Mode' />}
     </div>
   );
 };

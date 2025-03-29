@@ -35,11 +35,11 @@ const HomeNav = () => {
   }, [isOpen]);
 
   return (
-    <header className='lg:border-b-3 lg:border-primary-500 bg-white dark:bg-slate-800'>
+    <header className='lg:border-b-3 lg:border-primary-500 dark:lg:border-amber-600 bg-white dark:bg-slate-800'>
       <nav className='container mx-auto py-2 px-3 lg:flex lg:justify-between lg:items-center'>
         {/*=============================================================================
         ========================= Brand and mobile menu toggle========================== */}
-        <div className='w-full flex justify-between items-center lg:w-3/5 border-b-3 border-primary-500 lg:border-b-0'>
+        <div className='w-full flex justify-between items-center lg:w-3/5 border-b-3 border-primary-500 dark:border-amber-600 lg:border-b-0'>
           <Link to='/'>
             <img src={logo} alt='Letango brand logo' className='w-40' />
           </Link>
