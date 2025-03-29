@@ -11,8 +11,8 @@ const SolutionBox = () => {
         </h1>
         {/*=================================================================================
         ========================= Solutions provided section================================ */}
-        <div className='relative h-screen *:p-3 *:text-center'>
-          <article className='lg:w-40 lg:h-40 bg-primary-500 rounded-full  flex justify-center items-center lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-1/2 lg:hidden'>
+        <div className='relative h-auto lg:h-screen *:p-3 *:text-center'>
+          <article className='lg:w-40 lg:h-40 bg-primary-500 rounded-full flex justify-center items-center lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-1/2'>
             <div className='w-30 h-30 rounded-full bg-white flex justify-center items-center text-5xl text-green-500'>
               <HiLightBulb />
             </div>
@@ -34,11 +34,6 @@ const SolutionBox = () => {
           </article>
           <article className='lg:w-40 lg:h-40 bg-sky-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-20 lg:top-20'>
             community portfolio
-          </article>
-          <article className='lg:w-40 lg:h-40 bg-primary-500 rounded-full  lg:flex lg:justify-center lg:items-center lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-1/2 hidden'>
-            <div className='w-30 h-30 rounded-full bg-white flex justify-center items-center text-5xl text-green-500'>
-              <HiLightBulb />
-            </div>
           </article>
         </div>
       </section>
