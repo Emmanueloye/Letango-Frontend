@@ -1,4 +1,5 @@
 import { Form } from 'react-router-dom';
+import Button from '../UI/Button';
 
 const ContactBox = () => {
   return (
@@ -44,12 +45,12 @@ const ContactBox = () => {
               <textarea name='message' id='message' rows={5}></textarea>
             </div>
             {/* Button */}
-            <button
-              type='submit'
-              className='bg-green-600 hover:bg-green-400 px-3 py-2 rounded-md w-full capitalize text-white font-600'
-            >
-              send
-            </button>
+            <Button
+              btnText='send'
+              btnType={'submit'}
+              bg='green-600'
+              color='text-white'
+            />
           </Form>
         </div>
       </section>

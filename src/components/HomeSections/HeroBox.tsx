@@ -3,7 +3,7 @@ import phoneImage from '../../assets/mobile-noBg.png';
 
 const HeroBox = () => {
   return (
-    <div className='dark:bg-slate-800 -z-20' id='home'>
+    <div className='dark:bg-slate-800' id='home'>
       <section className='lg:pt-12'>
         {/*=================================================================================
         ========================= Hero section titles====================================== */}
@@ -24,14 +24,14 @@ const HeroBox = () => {
             className='max-w-full dark:z-20'
           />
         </div>
-        {/*=================================================================================
-        ========================= Hero section bottom tile=================================*/}
       </section>
-
-      <div className='w-full bg-green-500 dark:bg-slate-700 h-40 -mt-25 lg:-mt-30 border-t-2 border-orange-400 relative -z-10  dark:-z-0'>
+      {/*=================================================================================
+        ========================= Hero section call to action ==============================*/}
+      <div className='relative'>
+        <div className='w-full bg-green-500 dark:bg-slate-700 h-40 -mt-25 lg:-mt-30 border-t-2 border-orange-400 relative -z-10 dark:-z-0'></div>
         <Link
-          to='/'
-          className='absolute -bottom-3 text-sm sm:text-base sm:bottom-0 left-1/2 -translate-1/2 z-10 bg-primary-500 dark:bg-white dark:text-primary-500 text-white font-600 px-8 py-2 rounded-2xl shadow-md'
+          to='/signup'
+          className='absolute -bottom-3 text-sm sm:text-base sm:bottom-0 left-1/2 -translate-1/2 bg-primary-500 dark:bg-white dark:text-primary-500 text-white font-600 px-8 py-2 rounded-2xl shadow-md'
         >
           Join Now
         </Link>

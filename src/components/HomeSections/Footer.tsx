@@ -9,7 +9,11 @@ import { FaThreads } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({
+  scrollToSection,
+}: {
+  scrollToSection: (data: string) => void;
+}) => {
   return (
     <footer className='border-t-2 border-primary-500 dark:border-amber-600 *:text-primary-500 dark:*:text-gray-300 *:capitalize pb-4 pt-3'>
       <section className='pt-8 lg:grid lg:grid-cols-4 lg:gap-4 lg:items-start '>
@@ -79,7 +83,11 @@ const Footer = () => {
               Customer care
             </li>
             <li>
-              <Link to='/' className='flex items-center text-sm'>
+              <Link
+                to='/'
+                className='flex items-center text-sm'
+                onClick={() => scrollToSection('contact')}
+              >
                 contact Form
               </Link>
             </li>

@@ -99,7 +99,7 @@ const HomeNav = ({
             <div className='inline-block lg:flex flex-col lg:flex-row lg:items-center *:mb-2 *:lg:mb-0 *:mt-2 *:lg:mt-0 *:lg:mr-2'>
               <div>
                 <Link
-                  to='/'
+                  to='/signup'
                   className='bg-green-600 hover:bg-green-400 px-3 py-1 rounded-md text-white font-600'
                 >
                   Sign up
@@ -107,7 +107,7 @@ const HomeNav = ({
               </div>
               <div>
                 <Link
-                  to='/'
+                  to='/login'
                   className='border border-primary-500 font-500 text-primary-500 dark:text-slate-50 dark:border-slate-50 px-3 py-1 rounded-md hover:bg-primary-500 hover:text-white lg:mr-3'
                 >
                   Login in

@@ -17,7 +17,7 @@ const SolutionBox = () => {
               <HiLightBulb />
             </div>
           </article>
-          <article className='lg:w-40 lg:h-40 bg-sky-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-20 lg:top-20'>
+          <article className='lg:w-40 lg:h-40 bg-sky-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
             community portfolio
           </article>
           <article className='lg:w-40 lg:h-40 bg-green-700 capitalize text-slate-50 font-600 rounded-full flex justify-center items-center lg:absolute lg:right-20 lg:top-20'>
@@ -29,7 +29,7 @@ const SolutionBox = () => {
           <article className='lg:w-40 lg:h-40 bg-amber-600 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:bottom-20 lg:left-20'>
             crowd funding
           </article>
-          <article className='lg:w-40 lg:h-40 bg-pink-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-1/2 lg:-translate-x-1/2'>
+          <article className='lg:w-40 lg:h-40 bg-pink-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-20 lg:top-20'>
             s-commerce
           </article>
           <article className='lg:w-40 lg:h-40 bg-purple-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2'>
