@@ -1,7 +1,7 @@
 import phone from '../../assets/mobile-noBg.png';
 const AboutUsBox = () => {
   return (
-    <div className='pt-8 dark:bg-slate-800' id='solutions'>
+    <div className='pt-8 dark:bg-slate-800' id='about-us'>
       <section>
         {/*=================================================================================
            ========================= About us Title ========================================= */}

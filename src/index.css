@@ -28,4 +28,11 @@
   section {
     @apply container mx-auto py-2 px-3;
   }
+  label {
+    @apply block mb-1 capitalize dark:text-slate-50;
+  }
+  input,
+  textarea {
+    @apply block w-full p-2 outline-0 border border-gray-300 rounded-lg;
+  }
 }

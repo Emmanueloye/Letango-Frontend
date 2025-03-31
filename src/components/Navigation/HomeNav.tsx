@@ -1,10 +1,16 @@
 import { FaBars } from 'react-icons/fa';
 // import logo from '../../assets/logo-no-bg.png';
 // import whiteLogo from '../../assets/whiteLogo-nobg.png';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import SiteMode from './SiteMode';
-const HomeNav = () => {
+const HomeNav = ({
+  scrollToSection,
+  activeSection,
+}: {
+  scrollToSection: (data: string) => void;
+  activeSection: string;
+}) => {
   // State to manage mobile menue toggle.
   const [isOpen, setIsOpen] = useState(false);
   const [logo, setLogo] = useState<string | undefined>(undefined);
@@ -12,16 +18,6 @@ const HomeNav = () => {
   // Refs to manage the height of mobile menu drop down.
   const boxRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // useEffect(() => {
-  //   console.log(window.document.documentElement.classList.contains('dark'));
-
-  //   if (window.document.documentElement.classList.contains('dark')) {
-  //     setBrandLogo(whiteLogo);
-  //   } else {
-  //     setBrandLogo(logo);
-  //   }
-  // }, [brandLogo]);
 
   // Function setting the height of the container div to the height of the inner div which holds the mobile menus.
   useEffect(() => {
@@ -35,7 +31,7 @@ const HomeNav = () => {
   }, [isOpen]);
 
   return (
-    <header className='lg:border-b-3 lg:border-primary-500 dark:lg:border-amber-600 bg-white dark:bg-slate-800'>
+    <header className='lg:border-b-3 lg:border-primary-500 dark:lg:border-amber-600 bg-white dark:bg-slate-800 sticky top-0 left-0 z-50'>
       <nav className='container mx-auto py-2 px-3 lg:flex lg:justify-between lg:items-center'>
         {/*=============================================================================
         ========================= Brand and mobile menu toggle========================== */}
@@ -62,18 +58,40 @@ const HomeNav = () => {
           >
             <ul className='*:text-primary-500 font-500 *:mb-2 *:lg:mb-0 *:lg:pl-8 *:border-b-1 *:lg:border-b-0 lg:flex lg:justify-between'>
               <li className='pt-2 lg:pt-0  dark:text-slate-50'>
-                <NavLink
+                <Link
                   to='/'
-                  className={({ isActive }) => (isActive ? 'font-700' : '')}
+                  className={activeSection === 'home' ? 'font-700' : ''}
+                  onClick={() => scrollToSection('home')}
                 >
                   Home
-                </NavLink>
+                </Link>
               </li>
               <li className=' dark:text-slate-50'>
-                <NavLink to='#solutions'>Solutions</NavLink>
+                <Link
+                  to='/'
+                  className={activeSection === 'solutions' ? 'font-700' : ''}
+                  onClick={() => scrollToSection('solutions')}
+                >
+                  Solutions
+                </Link>
               </li>
               <li className=' dark:text-slate-50'>
-                <NavLink to='/'>About us</NavLink>
+                <Link
+                  to='/'
+                  className={activeSection === 'about-us' ? 'font-700' : ''}
+                  onClick={() => scrollToSection('about-us')}
+                >
+                  About us
+                </Link>
+              </li>
+              <li className=' dark:text-slate-50'>
+                <Link
+                  to='/'
+                  className={activeSection === 'contact' ? 'font-700' : ''}
+                  onClick={() => scrollToSection('contact')}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
             {/*=================================================================================

@@ -6,7 +6,7 @@ const SolutionBox = () => {
       <section>
         {/*=================================================================================
         ========================= Section Title ========================================= */}
-        <h1 className='text-3xl mb-18 text-primary-500 font-700 dark:text-slate-50 text-center underline underline-offset-8 decoration-primary-500 dark:decoration-slate-50'>
+        <h1 className='text-3xl mb-18 text-primary-500 font-700 dark:text-slate-50 text-center underline underline-offset-8 decoration-primary-500 dark:decoration-slate-50 capitalize'>
           Our solutions
         </h1>
         {/*=================================================================================
@@ -17,11 +17,14 @@ const SolutionBox = () => {
               <HiLightBulb />
             </div>
           </article>
+          <article className='lg:w-40 lg:h-40 bg-sky-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-20 lg:top-20'>
+            community portfolio
+          </article>
           <article className='lg:w-40 lg:h-40 bg-green-700 capitalize text-slate-50 font-600 rounded-full flex justify-center items-center lg:absolute lg:right-20 lg:top-20'>
             peer contribution
           </article>
           <article className='lg:w-40 lg:h-40 bg-yellow-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:right-20 lg:bottom-20'>
-            savings
+            solo contribution
           </article>
           <article className='lg:w-40 lg:h-40 bg-amber-600 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:bottom-20 lg:left-20'>
             crowd funding
@@ -31,9 +34,6 @@ const SolutionBox = () => {
           </article>
           <article className='lg:w-40 lg:h-40 bg-purple-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:bottom-0 lg:left-1/2 lg:-translate-x-1/2'>
             club managmenet
-          </article>
-          <article className='lg:w-40 lg:h-40 bg-sky-700 capitalize text-slate-50 font-600 rounded-full  flex justify-center items-center lg:absolute lg:left-20 lg:top-20'>
-            community portfolio
           </article>
         </div>
       </section>

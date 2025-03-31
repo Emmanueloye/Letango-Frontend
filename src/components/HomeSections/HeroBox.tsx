@@ -3,7 +3,7 @@ import phoneImage from '../../assets/mobile-noBg.png';
 
 const HeroBox = () => {
   return (
-    <div className='dark:bg-slate-800 -z-20'>
+    <div className='dark:bg-slate-800 -z-20' id='home'>
       <section className='lg:pt-12'>
         {/*=================================================================================
         ========================= Hero section titles====================================== */}

@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className='border-t-2 border-primary-500 dark:border-amber-600 *:text-primary-500 dark:*:text-gray-300 *:capitalize pb-4 mt-3'>
+    <footer className='border-t-2 border-primary-500 dark:border-amber-600 *:text-primary-500 dark:*:text-gray-300 *:capitalize pb-4 pt-3'>
       <section className='pt-8 lg:grid lg:grid-cols-4 lg:gap-4 lg:items-start '>
         {/*=================================================================================
            ========================= Footer company details==================================== */}
