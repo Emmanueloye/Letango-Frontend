@@ -39,6 +39,7 @@ const Footer = ({
               </span>
               <Link to='mailto:letango@letango.com'>letango@letango.com</Link>
             </li>
+            {/* Company's phone number */}
             <li className='flex items-center text-sm'>
               <span className='mr-2'>
                 <FaPhone />
@@ -146,6 +147,9 @@ const Footer = ({
           </ul>
         </article>
       </section>
+
+      {/*=================================================================================
+           ========================= Footer footnote ================================== */}
       <div className='text-center border-t-2 border-primary-500 dark:border-amber-600'>
         <small className='block mb-2 mt-2'>
           &copy; Copyright {new Date(Date.now()).getFullYear()}
