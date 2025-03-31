@@ -12,7 +12,7 @@ const ContactBox = () => {
         {/*=================================================================================
         ========================= The form box =========================================== */}
         <div className='lg:w-full'>
-          <Form method='post' className='lg:w-1/2 lg:mx-auto'>
+          <Form className='lg:w-1/2 lg:mx-auto'>
             {/* Full name group */}
             <div className='mb-2'>
               <label
