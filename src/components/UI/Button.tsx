@@ -2,7 +2,7 @@ const Button = ({
   btnText,
   btnType,
   bg = 'green-600',
-  color = 'white',
+  color = 'text-white',
 }: {
   btnText: string;
   btnType: 'submit' | 'button' | 'reset';

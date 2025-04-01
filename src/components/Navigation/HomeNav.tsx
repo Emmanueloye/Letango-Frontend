@@ -35,7 +35,7 @@ const HomeNav = ({
       <nav className='container mx-auto py-2 px-3 lg:flex lg:justify-between lg:items-center'>
         {/*=============================================================================
         ========================= Brand and mobile menu toggle========================== */}
-        <div className='w-full flex justify-between items-center lg:w-3/5 border-b-3 border-primary-500 dark:border-amber-600 lg:border-b-0'>
+        <div className='w-full flex justify-between items-center lg:w-2/5 border-b-3 border-primary-500 dark:border-amber-600 lg:border-b-0'>
           <Link to='/'>
             <img src={logo} alt='Letango brand logo' className='w-40' />
           </Link>

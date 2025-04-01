@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Footer from '../components/HomeSections/Footer';
 import HomeNav from '../components/Navigation/HomeNav';
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 
 const LandingLayout = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
@@ -25,6 +25,7 @@ const LandingLayout = () => {
       </main>
       {/* Footer */}
       <Footer scrollToSection={scrollToSection} />
+      <ScrollRestoration />
     </>
   );
 };
