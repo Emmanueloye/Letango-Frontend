@@ -23,7 +23,7 @@
 
 @layer base {
   body {
-    @apply font-ral font-400;
+    @apply font-ral font-400 text-base;
   }
   section {
     @apply container mx-auto py-2 px-3;

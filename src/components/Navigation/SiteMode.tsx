@@ -3,7 +3,7 @@ import { FaMoon, FaSun } from 'react-icons/fa';
 import coloredLogo from '../../assets/logo-no-bg.png';
 import whiteLogo from '../../assets/whiteLogo-nobg.png';
 
-const SiteMode = ({ setLogo }: { setLogo: (image: string) => void }) => {
+const SiteMode = ({ setLogo }: { setLogo?: (image: string) => void }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean | undefined>(undefined);
 
   // Switing site mode
@@ -26,9 +26,10 @@ const SiteMode = ({ setLogo }: { setLogo: (image: string) => void }) => {
 
   // Function is setting brand logo depending on whether we are in light or dark mode.
   useEffect(() => {
-    if (isDarkMode) {
+    if (isDarkMode && setLogo) {
       setLogo(whiteLogo);
-    } else {
+    }
+    if (!isDarkMode && setLogo) {
       setLogo(coloredLogo);
     }
   }, [isDarkMode, setLogo]);
