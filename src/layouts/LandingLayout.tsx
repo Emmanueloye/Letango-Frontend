@@ -6,6 +6,8 @@ import { Outlet, ScrollRestoration } from 'react-router-dom';
 const LandingLayout = () => {
   const [activeSection, setActiveSection] = useState<string>('home');
   const scrollToSection = (sectionId: string) => {
+    console.log(sectionId);
+
     const section = document.getElementById(sectionId);
     if (section) {
       section.scrollIntoView({ behavior: 'smooth' });
