@@ -4,12 +4,10 @@ import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { Link } from 'react-router-dom';
 import avater from '../../assets/avater.webp';
 import SiteMode from './SiteMode';
-import { useState } from 'react';
 
 const TopNav = () => {
   const dispatch = useAppDispatch();
   const { isSidebarOpen } = useAppSelector((state) => state.ui);
-  const [logo, setLogo] = useState<string | undefined>(undefined);
 
   const showNavLg = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-64';
 
@@ -37,7 +35,8 @@ const TopNav = () => {
 
         {/*=================================================================================
         ========================= Top nav menu ===================================== */}
-        <div>
+        <div className='flex items-center gap-2'>
+          <SiteMode />
           <img
             src={avater}
             alt='User image'

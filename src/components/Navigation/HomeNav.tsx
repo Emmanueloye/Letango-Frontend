@@ -35,9 +35,9 @@ const HomeNav = ({
       <nav className='container mx-auto py-2 px-3 lg:flex lg:justify-between lg:items-center'>
         {/*=============================================================================
         ========================= Brand and mobile menu toggle========================== */}
-        <div className='w-full flex justify-between items-center lg:w-2/5 border-b-3 border-primary-500 dark:border-amber-600 lg:border-b-0'>
+        <div className='flex justify-between items-center border-b-3 border-primary-500 dark:border-amber-600 lg:border-b-0'>
           <Link to='/'>
-            <img src={logo} alt='Letango brand logo' className='w-40' />
+            <img src={logo} alt='Letango brand logo' width={150} height={150} />
           </Link>
           <FaBars
             className='text-2xl text-primary-500 cursor-pointer lg:hidden dark:text-slate-50'
@@ -48,15 +48,15 @@ const HomeNav = ({
         ========================= desktop nav menu========================================== */}
         <div
           ref={containerRef}
-          className='h-0 lg:hfull overflow-hidden lg:overflow-visible bg-white z-30 transition-all duration-500 lg:w-full flex items-center'
+          className='h-0 lg:hfull overflow-hidden lg:overflow-visible bg-white z-30 transition-all duration-500 flex items-center'
         >
           {/*=================================================================================
         ========================= Main navigation menu========================================== */}
           <div
             ref={boxRef}
-            className='lg:flex lg:justify-between lg:items-center w-full dark:bg-slate-800'
+            className='lg:flex lg:justify-between gap-4 lg:items-center dark:bg-slate-800'
           >
-            <ul className='*:text-primary-500 font-500 *:mb-2 *:lg:mb-0 *:lg:pl-8 *:border-b-1 *:lg:border-b-0 lg:flex lg:justify-between'>
+            <ul className='*:text-primary-500 font-500 *:mb-2 *:lg:mb-0 *:lg:pl-8 *:border-b-1 *:lg:border-b-0 lg:flex lg:justify-between *:text-[15px]'>
               <li className='pt-2 lg:pt-0  dark:text-slate-50'>
                 <Link
                   to='/'
@@ -91,6 +91,14 @@ const HomeNav = ({
                   onClick={() => scrollToSection('contact')}
                 >
                   Contact
+                </Link>
+              </li>
+              <li className=' dark:text-slate-50'>
+                <Link
+                  to='/account'
+                  className={activeSection === 'contact' ? 'font-700' : ''}
+                >
+                  Account
                 </Link>
               </li>
             </ul>
