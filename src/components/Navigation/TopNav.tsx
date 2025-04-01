@@ -37,13 +37,23 @@ const TopNav = () => {
         ========================= Top nav menu ===================================== */}
         <div className='flex items-center gap-4'>
           <SiteMode />
-          <img
-            src={avater}
-            alt='User image'
-            width={50}
-            height={50}
-            className='rounded-full'
-          />
+          <div>
+            <img
+              src={avater}
+              alt='User image'
+              width={40}
+              height={40}
+              className='rounded-full'
+            />
+            <ul>
+              <li>
+                <Link to='/'>Profile</Link>
+              </li>
+              <li>
+                <Link to='/'>Change Password</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>

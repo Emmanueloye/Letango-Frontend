@@ -54,7 +54,7 @@ const HomeNav = ({
         ========================= Main navigation menu========================================== */}
           <div
             ref={boxRef}
-            className='lg:flex lg:justify-between gap-4 lg:items-center dark:bg-slate-800'
+            className='lg:flex lg:justify-between lg:gap-4 lg:items-center w-full dark:bg-slate-800'
           >
             <ul className='*:text-primary-500 font-500 *:mb-2 *:lg:mb-0 *:lg:pl-8 *:border-b-1 *:lg:border-b-0 lg:flex lg:justify-between *:text-[15px]'>
               <li className='pt-2 lg:pt-0  dark:text-slate-50'>

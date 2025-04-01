@@ -21,7 +21,7 @@ const SideBar = () => {
     >
       {/*=================================================================================
         ========================= Sidebar top card ===================================== */}
-      <div className='flex justify-between border-b-2 border-primary-500 dark:border-amber-500 dark:bg-slate-700 bg-green-200'>
+      <div className='flex justify-between items-center border-b-2 border-primary-500 dark:border-amber-500 dark:bg-slate-700 bg-green-200 px-2'>
         <div className='py-2.5 px-4 text-primary-500 dark:text-slate-50 '>
           <h3 className=' font-600'>Osunkoya Mayowa</h3>
           <p className='text-sm'>User ref: 112234</p>
@@ -30,7 +30,7 @@ const SideBar = () => {
         <FaTimesCircle
           onClick={() => dispatch(dashboardActions.closeSidebar())}
           title='Close'
-          className='text-2xl text-primary-500 cursor-pointer lg:hidden block'
+          className='text-2xl text-primary-500 cursor-pointer lg:hidden block dark:text-slate-50'
         />
       </div>
     </aside>
