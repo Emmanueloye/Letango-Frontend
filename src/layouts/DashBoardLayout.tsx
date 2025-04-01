@@ -12,7 +12,7 @@ const DashBoardLayout = () => {
       <SideBar />
       <TopNav />
       <main
-        className={`dark:bg-slate-700 min-h-screen w-full ml-0 ${adjustMain} transition-all duration-700 ease-in-out`}
+        className={`dark:bg-slate-700 min-h-screen w-full ml-0 ${adjustMain} transition-all duration-700 ease-in-out py-6 px-8`}
       >
         <Outlet />
       </main>

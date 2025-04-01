@@ -2,7 +2,7 @@ import { FaBars, FaHome } from 'react-icons/fa';
 import { dashboardActions } from '../../Actions/DashboardAction';
 import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { Link } from 'react-router-dom';
-import avater from '../../assets/avater.webp';
+import avater from '../../assets/user-2935527_1280.webp';
 import SiteMode from './SiteMode';
 
 const TopNav = () => {
@@ -28,20 +28,20 @@ const TopNav = () => {
           to='/'
           className='flex items-center gap-1 text-2xl text-primary-500 dark:text-slate-50'
         >
-          <FaHome className='' />
+          <FaHome className='text-green-500' />
 
           <span className='font-700 hidden lg:block'>Letango</span>
         </Link>
 
         {/*=================================================================================
         ========================= Top nav menu ===================================== */}
-        <div className='flex items-center gap-2'>
+        <div className='flex items-center gap-4'>
           <SiteMode />
           <img
             src={avater}
             alt='User image'
-            width={20}
-            height={20}
+            width={50}
+            height={50}
             className='rounded-full'
           />
         </div>
