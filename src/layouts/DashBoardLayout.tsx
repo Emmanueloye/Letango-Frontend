@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, ScrollRestoration } from 'react-router-dom';
 import SideBar from '../components/Navigation/SideBar';
 import TopNav from '../components/Navigation/TopNav';
 import { useAppSelector } from '../Actions/store';
@@ -8,7 +8,7 @@ const DashBoardLayout = () => {
 
   const adjustMain = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-64';
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <SideBar />
       <TopNav />
       <main
@@ -16,6 +16,7 @@ const DashBoardLayout = () => {
       >
         <Outlet />
       </main>
+      <ScrollRestoration />
     </div>
   );
 };

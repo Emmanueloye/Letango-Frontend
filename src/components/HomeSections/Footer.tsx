@@ -84,13 +84,12 @@ const Footer = ({
               Customer care
             </li>
             <li>
-              <Link
-                to='/'
+              <button
                 className='flex items-center text-sm'
                 onClick={() => scrollToSection('contact')}
               >
-                contact Form
-              </Link>
+                Contact Form
+              </button>
             </li>
             <li>
               <Link to='tel:08111111111' className='text-sm'>

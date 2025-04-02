@@ -1,14 +1,18 @@
-import { FaBars, FaHome } from 'react-icons/fa';
+import { FaBars, FaHome, FaLock, FaUserAlt } from 'react-icons/fa';
 import { dashboardActions } from '../../Actions/DashboardAction';
 import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { Link } from 'react-router-dom';
 import avater from '../../assets/user-2935527_1280.webp';
 import SiteMode from './SiteMode';
+import { CiLogout } from 'react-icons/ci';
+import { useState } from 'react';
 
 const TopNav = () => {
+  const [isAuthMenuOpen, setIsAuthMenuOpen] = useState(false);
   const dispatch = useAppDispatch();
   const { isSidebarOpen } = useAppSelector((state) => state.ui);
 
+  // Toggle sidebar class names
   const showNavLg = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-64';
 
   return (
@@ -37,20 +41,40 @@ const TopNav = () => {
         ========================= Top nav menu ===================================== */}
         <div className='flex items-center gap-4'>
           <SiteMode />
-          <div>
+          <div className='relative'>
             <img
               src={avater}
               alt='User image'
               width={40}
               height={40}
               className='rounded-full'
+              onClick={() => setIsAuthMenuOpen(!isAuthMenuOpen)}
             />
-            <ul>
-              <li>
-                <Link to='/'>Profile</Link>
+            <ul
+              className={`absolute top-[140%]  text-sm w-38 bg-slate-100 dark:bg-slate-800  dark:text-slate-50 p-2 invisible right-0 ${
+                isAuthMenuOpen ? 'visible' : 'right-1'
+              } transition-all duration-500`}
+            >
+              <li className='pt-2 mb-5'>
+                <Link
+                  to='/'
+                  className='flex items-baseline hover:text-amber-600'
+                >
+                  <FaUserAlt />
+                  <span className='ml-1'>Profile</span>
+                </Link>
+              </li>
+              <li className='mb-5'>
+                <Link to='/' className='flex items-baseline'>
+                  <FaLock />
+                  <span className='ml-1'>Change Password</span>
+                </Link>
               </li>
               <li>
-                <Link to='/'>Change Password</Link>
+                <button className='flex items-baseline'>
+                  <CiLogout />
+                  <span className='ml-1'>Logout</span>
+                </button>
               </li>
             </ul>
           </div>

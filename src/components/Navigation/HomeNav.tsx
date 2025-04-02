@@ -1,7 +1,7 @@
 import { FaBars } from 'react-icons/fa';
 // import logo from '../../assets/logo-no-bg.png';
 // import whiteLogo from '../../assets/whiteLogo-nobg.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import SiteMode from './SiteMode';
 const HomeNav = ({
@@ -67,39 +67,36 @@ const HomeNav = ({
                 </Link>
               </li>
               <li className=' dark:text-slate-50'>
-                <Link
-                  to='/'
+                <button
                   className={activeSection === 'solutions' ? 'font-700' : ''}
                   onClick={() => scrollToSection('solutions')}
                 >
                   Solutions
-                </Link>
+                </button>
               </li>
               <li className=' dark:text-slate-50'>
-                <Link
-                  to='/'
+                <button
                   className={activeSection === 'about-us' ? 'font-700' : ''}
                   onClick={() => scrollToSection('about-us')}
                 >
                   About us
-                </Link>
+                </button>
               </li>
               <li className=' dark:text-slate-50'>
-                <Link
-                  to='/'
+                <button
                   className={activeSection === 'contact' ? 'font-700' : ''}
                   onClick={() => scrollToSection('contact')}
                 >
                   Contact
-                </Link>
+                </button>
               </li>
               <li className=' dark:text-slate-50'>
-                <Link
+                <NavLink
                   to='/account'
-                  className={activeSection === 'contact' ? 'font-700' : ''}
+                  className={({ isActive }) => (isActive ? 'font-700' : '')}
                 >
                   Account
-                </Link>
+                </NavLink>
               </li>
             </ul>
             {/*=================================================================================

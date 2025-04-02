@@ -1,6 +1,7 @@
 import { FaTimesCircle } from 'react-icons/fa';
 import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { dashboardActions } from '../../Actions/DashboardAction';
+import { NavLink } from 'react-router-dom';
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -17,7 +18,7 @@ const SideBar = () => {
 
   return (
     <aside
-      className={`bg-gray-100 dark:bg-slate-800 lg:w-64 fixed -left-[200%] ${showSidebarLg} ${showMobileSidebar} h-full transition-all duration-700 ease-in-out shadow-sm `}
+      className={`bg-gray-100 dark:bg-slate-800 lg:w-64 fixed -left-[200%] ${showSidebarLg} ${showMobileSidebar} h-full transition-all duration-700 ease-in-out shadow-sm overflow-y-auto`}
     >
       {/*=================================================================================
         ========================= Sidebar top card ===================================== */}
@@ -33,6 +34,27 @@ const SideBar = () => {
           className='text-2xl text-primary-500 cursor-pointer lg:hidden block dark:text-slate-50'
         />
       </div>
+      {/*=================================================================================
+        ========================= Sidebar navigation =================================== */}
+      <ul className='px-3 py-4'>
+        <li className='mb-2'>
+          <NavLink
+            to='/account'
+            className={({ isActive }) => (isActive ? 'font-700' : '')}
+          >
+            Dashboard
+          </NavLink>
+        </li>
+        <li className='mb-2'>
+          <NavLink to='/account'>Personal Wallet</NavLink>
+        </li>
+        <li className='mb-2'>
+          <NavLink to='/account'>Manage Group</NavLink>
+        </li>
+        <li className='mb-2'>
+          <NavLink to='/account'>Reports</NavLink>
+        </li>
+      </ul>
     </aside>
   );
 };
