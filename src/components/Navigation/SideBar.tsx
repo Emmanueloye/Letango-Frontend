@@ -36,7 +36,7 @@ const SideBar = () => {
       </div>
       {/*=================================================================================
         ========================= Sidebar navigation =================================== */}
-      <ul className='px-3 py-4'>
+      <ul className='px-3 py-4 dark:text-slate-50'>
         <li className='mb-2'>
           <NavLink
             to='/account'
