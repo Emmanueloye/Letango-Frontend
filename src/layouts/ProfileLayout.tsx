@@ -1,27 +1,40 @@
-import { Link, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 
 const ProfileLayout = () => {
   return (
     <>
       <div className='flex justify-center flex-wrap *:mr-1'>
-        <Link
+        <NavLink
           to='/account/profile'
-          className='bg-primary-500 dark:bg-slate-800 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+          end
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-green-600 dark:bg-green-600 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+              : 'bg-primary-500 dark:bg-slate-800 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+          }
         >
           Profile
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/account/profile/edit-profile'
-          className='bg-primary-500 dark:bg-slate-800 rounded-t-md px-4 py-2 text-slate-50 text-sm'
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-green-600 dark:bg-green-600 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+              : 'bg-primary-500 dark:bg-slate-800 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+          }
         >
           Edit Profile
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
           to='/account/profile/change-password'
-          className='bg-primary-500 dark:bg-slate-800 rounded-t-md px-3 py-2 text-slate-50 text-sm'
+          className={({ isActive }) =>
+            isActive
+              ? 'bg-green-600 dark:bg-green-600 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+              : 'bg-primary-500 dark:bg-slate-800 rounded-t-md px-8 py-2 text-slate-50 text-sm'
+          }
         >
           Update Password
-        </Link>
+        </NavLink>
       </div>
       <Outlet />
     </>
