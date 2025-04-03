@@ -1,8 +1,7 @@
-import { FaBars, FaHome, FaLock, FaUserAlt } from 'react-icons/fa';
+import { FaAngleDown, FaBars, FaHome, FaLock, FaUserAlt } from 'react-icons/fa';
 import { dashboardActions } from '../../Actions/DashboardAction';
 import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { Link } from 'react-router-dom';
-import avater from '../../assets/user-2935527_1280.webp';
 import SiteMode from './SiteMode';
 import { CiLogout } from 'react-icons/ci';
 import { useState } from 'react';
@@ -13,11 +12,11 @@ const TopNav = () => {
   const { isSidebarOpen } = useAppSelector((state) => state.ui);
 
   // Toggle sidebar class names
-  const showNavLg = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-64';
+  const showNavLg = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-63';
 
   return (
     <nav
-      className={`w-full ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 z-20 flex items-center`}
+      className={`w-full ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 bg-white z-6 flex items-center`}
     >
       <div className='container mx-auto py-2 px-4 flex justify-between items-center'>
         {/* Sidebar toggle menu */}
@@ -41,23 +40,27 @@ const TopNav = () => {
         ========================= Top nav menu ===================================== */}
         <div className='flex items-center gap-4'>
           <SiteMode />
+          {/* Dropdown menu */}
           <div className='relative'>
-            <img
-              src={avater}
-              alt='User image'
-              width={40}
-              height={40}
-              className='rounded-full'
+            <div
+              className='flex items-center cursor-pointer'
               onClick={() => setIsAuthMenuOpen(!isAuthMenuOpen)}
-            />
+            >
+              <span className='mt-1 dark:text-slate-50'>
+                {`Osunkoya`.charAt(0).toUpperCase()}
+                {`mayowa`.charAt(0).toUpperCase()}
+              </span>
+              <FaAngleDown className='mt-1 dark:text-slate-50' />
+            </div>
+            {/* Dropdown menu for profile */}
             <ul
-              className={`absolute top-[140%]  text-sm w-38 bg-slate-100 dark:bg-slate-800  dark:text-slate-50 p-2 invisible right-0 ${
+              className={`absolute top-[160%]  text-sm w-38 bg-slate-100 dark:bg-slate-800  dark:text-slate-50 p-2 invisible right-0 ${
                 isAuthMenuOpen ? 'visible' : 'right-1'
               } transition-all duration-500`}
             >
               <li className='pt-2 mb-5'>
                 <Link
-                  to='/'
+                  to='/account/profile'
                   className='flex items-baseline hover:text-amber-600'
                 >
                   <FaUserAlt />
@@ -65,7 +68,10 @@ const TopNav = () => {
                 </Link>
               </li>
               <li className='mb-5'>
-                <Link to='/' className='flex items-baseline'>
+                <Link
+                  to='/account/profile/change-password'
+                  className='flex items-baseline'
+                >
                   <FaLock />
                   <span className='ml-1'>Change Password</span>
                 </Link>

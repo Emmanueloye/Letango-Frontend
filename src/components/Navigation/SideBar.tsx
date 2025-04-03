@@ -2,6 +2,7 @@ import { FaTimesCircle } from 'react-icons/fa';
 import { useAppDispatch, useAppSelector } from '../../Actions/store';
 import { dashboardActions } from '../../Actions/DashboardAction';
 import { NavLink } from 'react-router-dom';
+import avater from '../../assets/user-2935527_1280.webp';
 
 const SideBar = () => {
   const dispatch = useAppDispatch();
@@ -18,14 +19,23 @@ const SideBar = () => {
 
   return (
     <aside
-      className={`bg-gray-100 dark:bg-slate-800 lg:w-64 fixed -left-[200%] ${showSidebarLg} ${showMobileSidebar} h-full transition-all duration-700 ease-in-out shadow-sm overflow-y-auto`}
+      className={`bg-gray-100 dark:bg-slate-800 lg:w-63 fixed -left-[200%] ${showSidebarLg} ${showMobileSidebar} h-full transition-all duration-700 ease-in-out shadow-sm overflow-y-auto`}
     >
       {/*=================================================================================
         ========================= Sidebar top card ===================================== */}
       <div className='flex justify-between items-center border-b-2 border-primary-500 dark:border-amber-500 dark:bg-slate-700 bg-green-200 px-2'>
-        <div className='py-2.5 px-4 text-primary-500 dark:text-slate-50 '>
-          <h3 className=' font-600'>Osunkoya Mayowa</h3>
-          <p className='text-sm'>User ref: 112234</p>
+        <div className='flex item-center py-2.5 px-4 text-primary-500 dark:text-slate-50 '>
+          <img
+            src={avater}
+            alt='User image'
+            width={40}
+            height={40}
+            className='rounded-full mr-1'
+          />
+          <div>
+            <h3 className=' font-600'>Osunkoya Mayowa</h3>
+            <p className='text-sm'>User ref: 112234</p>
+          </div>
         </div>
         {/* Close button on small screen */}
         <FaTimesCircle
@@ -44,6 +54,9 @@ const SideBar = () => {
           >
             Dashboard
           </NavLink>
+        </li>
+        <li className='mb-2'>
+          <NavLink to='/account/profile'>Personal Profile</NavLink>
         </li>
         <li className='mb-2'>
           <NavLink to='/account'>Personal Wallet</NavLink>

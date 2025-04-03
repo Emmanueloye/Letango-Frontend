@@ -4,7 +4,7 @@ import logo from '../../assets/logo-no-bg.png';
 
 const LoginForm = () => {
   return (
-    <div>
+    <>
       <section className='mt-30'>
         <Form className='lg:w-1/2 mx-auto border-1 border-primary-500 pb-3 rounded-md'>
           <div className='w-full h-20 flex justify-center border-b-2 border-b-amber-500 mb-2 dark:bg-green-200 rounded-md'>
@@ -34,12 +34,18 @@ const LoginForm = () => {
                 Create an account here.
               </Link>
             </div>
+            <div className='text-sm mb-2 dark:text-slate-50'>
+              <span>Forget password? </span>
+              <Link to='/reset-password' className='underline'>
+                Reset password here.
+              </Link>
+            </div>
             {/* Login submit button. */}
             <Button btnText='Login' btnType='submit' />
           </div>
         </Form>
       </section>
-    </div>
+    </>
   );
 };
 

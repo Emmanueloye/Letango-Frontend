@@ -23,13 +23,13 @@
 
 @layer base {
   body {
-    @apply font-ral font-400 text-base;
+    @apply font-ral font-400 text-base text-primary-500;
   }
   section {
     @apply container mx-auto py-2 px-3;
   }
   label {
-    @apply block mb-1 capitalize dark:text-slate-50 text-sm;
+    @apply block mb-1 capitalize dark:text-slate-50 text-sm font-500;
   }
   input,
   textarea {

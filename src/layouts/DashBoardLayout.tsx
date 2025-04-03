@@ -6,9 +6,9 @@ import { useAppSelector } from '../Actions/store';
 const DashBoardLayout = () => {
   const { isSidebarOpen } = useAppSelector((state) => state.ui);
 
-  const adjustMain = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-64';
+  const adjustMain = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-63';
   return (
-    <div className='overflow-x-hidden'>
+    <div>
       <SideBar />
       <TopNav />
       <main
