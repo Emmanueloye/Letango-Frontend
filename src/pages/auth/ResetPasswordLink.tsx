@@ -1,4 +1,4 @@
-import ResetPasswordLinkForm from '../components/AuthComponets/ResetPasswordLinkForm';
+import ResetPasswordLinkForm from '../../components/AuthComponets/ResetPasswordLinkForm';
 
 const ResetPasswordLink = () => {
   return <ResetPasswordLinkForm />;

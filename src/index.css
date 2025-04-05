@@ -32,7 +32,8 @@
     @apply block mb-1 capitalize dark:text-slate-50 text-sm font-500;
   }
   input,
-  textarea {
+  textarea,
+  select {
     @apply block w-full py-2 px-4 outline-0 border border-gray-300 rounded-md dark:text-slate-50;
   }
 }

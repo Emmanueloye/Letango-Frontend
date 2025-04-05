@@ -1,9 +1,9 @@
-import avater from '../assets/user-2935527_1280.webp';
+import avater from '../../assets/user-2935527_1280.webp';
 const Profile = () => {
   return (
     <article className='w-11/12 bg-gray-100 dark:bg-slate-800 container mx-auto lg:py-2 lg:px-3 shadow-lg'>
       {/* profile image */}
-      <div className='flex justify-center mt-8 mb-12 border-b-1 border-green-500'>
+      <div className='flex justify-center lg:mt-8 mb-12 border-b-1 border-green-500'>
         <img
           src={avater}
           alt='User profile image'

@@ -47,25 +47,56 @@ const SideBar = () => {
       {/*=================================================================================
         ========================= Sidebar navigation =================================== */}
       <ul className='px-3 py-4 dark:text-slate-50'>
-        <li className='mb-2'>
+        <li className='mb-2 p-1'>
           <NavLink
             to='/account'
-            className={({ isActive }) => (isActive ? 'font-700' : '')}
+            end
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
           >
             Dashboard
           </NavLink>
         </li>
-        <li className='mb-2'>
-          <NavLink to='/account/profile'>Personal Profile</NavLink>
+        <li className='mb-2 p-1'>
+          <NavLink
+            to='/account/profile'
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
+          >
+            Personal Profile
+          </NavLink>
         </li>
-        <li className='mb-2'>
-          <NavLink to='/account'>Personal Wallet</NavLink>
+        <li className='mb-2 p-1'>
+          <NavLink
+            to='/account/personal-wallet'
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
+          >
+            Personal Wallet
+          </NavLink>
         </li>
-        <li className='mb-2'>
-          <NavLink to='/account'>Manage Group</NavLink>
+        <li className='mb-2 p-1'>
+          <NavLink
+            to='/account/manage-group'
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
+          >
+            Manage Group
+          </NavLink>
         </li>
-        <li className='mb-2'>
-          <NavLink to='/account'>Reports</NavLink>
+        <li className='mb-2 p-1'>
+          <NavLink
+            to='/account/reports'
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
+          >
+            Reports
+          </NavLink>
         </li>
       </ul>
     </aside>

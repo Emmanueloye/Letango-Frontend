@@ -1,4 +1,5 @@
-import UpdateProfileForm from '../components/AuthComponets/UpdateProfileForm';
+import UpdateProfileForm from "../../components/AuthComponets/UpdateProfileForm";
+
 
 const ProfileUpdate = () => {
   return <UpdateProfileForm />;

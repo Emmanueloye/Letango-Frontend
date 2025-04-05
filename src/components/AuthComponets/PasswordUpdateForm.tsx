@@ -32,7 +32,12 @@ const PasswordUpdateForm = () => {
           >
             new password
           </label>
-          <input type='text' id='password' name='password' autoComplete='off' />
+          <input
+            type='password'
+            id='password'
+            name='password'
+            autoComplete='off'
+          />
         </div>
         {/* Email group */}
         <div className='mb-2'>
@@ -43,11 +48,10 @@ const PasswordUpdateForm = () => {
             confirm Passowrd
           </label>
           <input
-            type='text'
+            type='password'
             id='confirmPassowrd'
             name='confirmPassowrd'
             autoComplete='off'
-            disabled
           />
         </div>
 

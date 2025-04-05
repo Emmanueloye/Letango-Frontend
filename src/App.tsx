@@ -1,15 +1,18 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './pages/Home';
 import LandingLayout from './layouts/LandingLayout';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Login from './pages/auth/Login';
+import Register from './pages/auth/Register';
 import DashBoardLayout from './layouts/DashBoardLayout';
-import Profile from './pages/Profile';
+import Profile from './pages/auth/Profile';
 import ProfileLayout from './layouts/ProfileLayout';
-import ProfileUpdate from './pages/ProfileUpdate';
-import PasswordUpdate from './pages/PasswordUpdate';
-import ResetPasswordLink from './pages/ResetPasswordLink';
-import PasswordReset from './pages/PasswordReset';
+import ProfileUpdate from './pages/auth/ProfileUpdate';
+import PasswordUpdate from './pages/auth/PasswordUpdate';
+import ResetPasswordLink from './pages/auth/ResetPasswordLink';
+import PasswordReset from './pages/auth/PasswordReset';
+import Dashboard from './pages/Dashboard';
+import ManageGroup from './pages/userGroupMgt/ManageGroup';
+import CreateGroup from './pages/userGroupMgt/CreateGroup';
 
 const router = createBrowserRouter([
   {
@@ -27,7 +30,7 @@ const router = createBrowserRouter([
     path: '/account',
     element: <DashBoardLayout />,
     children: [
-      { index: true, element: <p>dashboard</p> },
+      { index: true, element: <Dashboard /> },
       {
         path: 'profile',
         element: <ProfileLayout />,
@@ -37,6 +40,16 @@ const router = createBrowserRouter([
           { path: 'change-password', element: <PasswordUpdate /> },
         ],
       },
+      { path: 'personal-wallet', element: <p>Personal wallet</p> },
+      {
+        path: 'manage-group',
+
+        children: [
+          { index: true, element: <ManageGroup /> },
+          { path: 'create-group', element: <CreateGroup /> },
+        ],
+      },
+      { path: 'reports', element: <p>reports</p> },
     ],
   },
 ]);
