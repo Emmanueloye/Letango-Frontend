@@ -80,6 +80,16 @@ const SideBar = () => {
         </li>
         <li className='mb-2 p-1'>
           <NavLink
+            to='/account/kyc'
+            className={({ isActive }) =>
+              isActive ? 'block font-700' : 'block'
+            }
+          >
+            KYC
+          </NavLink>
+        </li>
+        <li className='mb-2 p-1'>
+          <NavLink
             to='/account/manage-group'
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'

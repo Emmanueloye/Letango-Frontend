@@ -13,6 +13,7 @@ import PasswordReset from './pages/auth/PasswordReset';
 import Dashboard from './pages/Dashboard';
 import ManageGroup from './pages/userGroupMgt/ManageGroup';
 import CreateGroup from './pages/userGroupMgt/CreateGroup';
+import KYC from './pages/userGroupMgt/KYC';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,7 @@ const router = createBrowserRouter([
           { path: 'create-group', element: <CreateGroup /> },
         ],
       },
+      { path: 'kyc', element: <KYC /> },
       { path: 'reports', element: <p>reports</p> },
     ],
   },
