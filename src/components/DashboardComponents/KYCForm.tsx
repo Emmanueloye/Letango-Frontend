@@ -54,6 +54,16 @@ const KYCForm = () => {
             </label>
             <input type='text' id='phone' name='phone' autoComplete='off' />
           </div>
+          {/* BVN */}
+          <div className='mb-2'>
+            <label
+              htmlFor='BVN'
+              className={`after:text-red-500 after:content-['*'] after:font-700 text-sm`}
+            >
+              BVN
+            </label>
+            <input type='text' id='BVN' name='BVN' autoComplete='off' />
+          </div>
         </div>
         {/* document upload section */}
         <Title title='Documentation' />

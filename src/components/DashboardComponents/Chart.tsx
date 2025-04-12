@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   BarChart,
   Bar,
@@ -8,62 +9,23 @@ import {
   ResponsiveContainer,
 } from 'recharts';
 
-// Temporary data
-const data = [
-  {
-    name: 'Jan',
-    PC: 1200,
-    GC: 1200,
-    total: 2400,
-  },
-  {
-    name: 'Feb',
-    PC: 860,
-    GC: 1350,
-    total: 2210,
-  },
-  {
-    name: 'Mar',
-    PC: 2000,
-    GC: 290,
-    total: 2290,
-  },
-  {
-    name: 'Apr',
-    PC: 1000,
-    GC: 1000,
-    total: 2000,
-  },
-  {
-    name: 'May',
-    PC: 1100,
-    GC: 1081,
-    total: 2181,
-  },
-  {
-    name: 'Jun',
-    PC: 1500,
-    GC: 1000,
-    total: 2500,
-  },
-  {
-    name: 'Jul',
-    PC: 900,
-    GC: 1200,
-    total: 2100,
-  },
-];
+interface ChartData {
+  data: { [key: string]: number | string }[];
+  xAxisName: string;
+  dataKeys: string[];
+  barColors: string[];
+}
 
-const Chart = () => {
+const Chart: React.FC<ChartData> = ({
+  data,
+  xAxisName,
+  dataKeys,
+  barColors,
+}) => {
+  console.log(data);
+
   return (
     <div className='mt-8 w-full'>
-      <h3 className='py-4  font-600 uppercase '>
-        Monthly Contribution Tracker
-      </h3>
-      <div className='flex gap-2 flex-wrap'>
-        <p>PC: Personal contribution</p>
-        <p>GC: Group contribution</p>
-      </div>
       <ResponsiveContainer width={'100%'} height={300}>
         <BarChart
           data={data}
@@ -74,24 +36,20 @@ const Chart = () => {
             bottom: 5,
           }}
         >
-          <XAxis dataKey='name' />
+          <XAxis dataKey={xAxisName} />
           <YAxis stroke='#f69e00' />
           <Tooltip />
-          <Bar
-            dataKey='PC'
-            fill='#00b6d4'
-            activeBar={<Rectangle fill='#00b6d4' />}
-          />
-          <Bar
-            dataKey='GC'
-            fill='#00c65a'
-            activeBar={<Rectangle fill='#00c65a' />}
-          />
-          <Bar
-            dataKey='total'
-            fill='#011359'
-            activeBar={<Rectangle fill='#011359' />}
-          />
+          {/* the number of bars that will show will depends on the numbers of datakeys specified. */}
+          {Array.from({ length: dataKeys?.length }).map((_, index) => {
+            return (
+              <Bar
+                key={index}
+                dataKey={dataKeys[index]}
+                fill={barColors[index]}
+                activeBar={<Rectangle fill={barColors[index]} />}
+              />
+            );
+          })}
         </BarChart>
       </ResponsiveContainer>
     </div>

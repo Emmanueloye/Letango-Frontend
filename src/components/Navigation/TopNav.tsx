@@ -16,7 +16,7 @@ const TopNav = () => {
 
   return (
     <nav
-      className={`w-full ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 bg-white z-6 flex items-center`}
+      className={`w-screen ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 bg-white z-6 flex items-center`}
     >
       <div className='container mx-auto py-2 px-4 flex justify-between items-center'>
         {/* Sidebar toggle menu */}

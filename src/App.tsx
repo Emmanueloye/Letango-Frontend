@@ -14,6 +14,8 @@ import Dashboard from './pages/Dashboard';
 import ManageGroup from './pages/userGroupMgt/ManageGroup';
 import CreateGroup from './pages/userGroupMgt/CreateGroup';
 import KYC from './pages/userGroupMgt/KYC';
+import PersonalWallet from './pages/wallet/PersonalWallet';
+import WalletTransaction from './pages/wallet/WalletTransaction';
 
 const router = createBrowserRouter([
   {
@@ -41,7 +43,16 @@ const router = createBrowserRouter([
           { path: 'change-password', element: <PasswordUpdate /> },
         ],
       },
-      { path: 'personal-wallet', element: <p>Personal wallet</p> },
+      {
+        path: 'personal-wallet',
+        children: [
+          { index: true, element: <PersonalWallet /> },
+          {
+            path: 'transactions',
+            element: <WalletTransaction />,
+          },
+        ],
+      },
       {
         path: 'manage-group',
 

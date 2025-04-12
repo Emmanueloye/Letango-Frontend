@@ -35,9 +35,10 @@ const CreateGroupForm = () => {
             <option value='' hidden>
               Select group type
             </option>
-            <option value=''>Ajo/contribution</option>
+            <option value=''>Peer contribution</option>
             <option value=''>Association</option>
             <option value=''>Club</option>
+            <option value=''>Crowd funding</option>
           </select>
         </div>
         {/* Group purpose input */}
@@ -55,8 +56,9 @@ const CreateGroupForm = () => {
             </option>
             <option value=''>Personal contribution</option>
             <option value=''>Group contribution</option>
-            <option value=''>Community project</option>
+            <option value=''>Community portfolio</option>
             <option value=''>Special project</option>
+            <option value=''>Fund raising</option>
           </select>
         </div>
         {/* Group logo */}
