@@ -63,8 +63,8 @@ const GroupView = () => {
         {/* Group chat */}
         <aside
           className={`bg-gray-100 dark:bg-slate-800 basis-full w-full lg:basis-2/5 absolute ${
-            showChat ? 'right-0' : '-right-[600%]'
-          } top-0 lg:sticky lg:top-0 h-screen overflow-y-auto aside transition-all duration-500 ease-in-out`}
+            showChat ? 'block' : 'hidden'
+          } lg:block top-0 lg:sticky lg:top-0 h-screen overflow-y-auto aside transition-all duration-500 ease-in-out`}
         >
           <div>
             {/* Chat text box */}
