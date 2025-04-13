@@ -12,7 +12,7 @@ interface DataType {
 
 const Dashboard = () => {
   return (
-    <>
+    <section>
       <div className='grid lg:grid-cols-4 sm:grid-cols-2 gap-2'>
         <Card
           cardDesc='personal wallet'
@@ -35,22 +35,21 @@ const Dashboard = () => {
           icon={<FaFolder />}
         />
       </div>
-      <>
-        <h3 className='py-4  font-600 uppercase '>
-          Monthly Contribution Tracker
-        </h3>
-        <div className='flex gap-2 flex-wrap'>
-          <p>PC: Personal contribution</p>
-          <p>GC: Group contribution</p>
-        </div>
-        <Chart
-          data={data as DataType[]}
-          xAxisName='name'
-          dataKeys={['PC', 'GC', 'total']}
-          barColors={['#00b6d4', '#00a63e', '#011359']}
-        />
-      </>
-    </>
+
+      <h3 className='py-4  font-600 uppercase '>
+        Monthly Contribution Tracker
+      </h3>
+      <div className='flex gap-2 flex-wrap'>
+        <p>PC: Personal contribution</p>
+        <p>GC: Group contribution</p>
+      </div>
+      <Chart
+        data={data as DataType[]}
+        xAxisName='name'
+        dataKeys={['PC', 'GC', 'total']}
+        barColors={['#00b6d4', '#00a63e', '#011359']}
+      />
+    </section>
   );
 };
 

@@ -4,7 +4,7 @@ import Button from '../UI/Button';
 
 const KYCForm = () => {
   return (
-    <div>
+    <section>
       <Form>
         {/* General info section */}
         <Title title='general information' />
@@ -88,7 +88,7 @@ const KYCForm = () => {
         </div>
         <Button btnText='submit' btnType='submit' />
       </Form>
-    </div>
+    </section>
   );
 };
 

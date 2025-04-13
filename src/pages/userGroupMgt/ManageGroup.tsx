@@ -4,7 +4,7 @@ import GroupCard from '../../components/DashboardComponents/GroupCard';
 
 const ManageGroup = () => {
   return (
-    <>
+    <section>
       <Link
         to='/account/manage-group/create-group'
         className='bg-primary-500 text-slate-50 px-3 py-2 rounded-md capitalize font-600 mt-1 mb-4'
@@ -17,20 +17,20 @@ const ManageGroup = () => {
           cardDesc='Alapomeji Association'
           balance={1_200_000}
           icon={<FaUserGroup />}
-          detailURLText={'view details'}
-          detailURL='/'
-          editURL='/'
+          detailURLText={'view group'}
+          detailURL='/account/manage-group/view/1'
+          editURL='/account/manage-group/update-group/1'
         />
         <GroupCard
           cardDesc='Majue Contribution'
           balance={200_000}
           icon={<FaPeopleGroup />}
-          detailURLText={'view details'}
-          detailURL='/'
-          editURL='/'
+          detailURLText={'view group'}
+          detailURL='/account/manage-group/view/2'
+          editURL='/account/manage-group/update-group/2'
         />
       </div>
-    </>
+    </section>
   );
 };
 

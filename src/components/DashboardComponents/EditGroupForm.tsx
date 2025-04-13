@@ -1,13 +1,13 @@
 import { Form } from 'react-router-dom';
-import Button from '../UI/Button';
 import Title from '../UI/Title';
+import Button from '../UI/Button';
 
-const CreateGroupForm = () => {
+const EditGroupForm = () => {
   return (
     <div className='w-full lg:w-4/5 lg:mx-auto bg-gray-100 dark:bg-slate-800 p-2.5 lg:p-4 rounded-lg'>
       {/* Form title */}
-      <Title title='create new group' />
-      <Form id='createGroup'>
+      <Title title='update group' />
+      <Form id='updateGroup'>
         {/* Group name input */}
         <div className='mb-6'>
           <label
@@ -20,6 +20,7 @@ const CreateGroupForm = () => {
             type='text'
             id='groupName'
             name='groupName'
+            defaultValue={''}
             autoComplete='off'
           />
         </div>
@@ -81,12 +82,16 @@ const CreateGroupForm = () => {
             Group description
           </label>
 
-          <textarea name='description' id='description'></textarea>
+          <textarea
+            name='description'
+            id='description'
+            defaultValue={''}
+          ></textarea>
         </div>
-        <Button btnText='create group' btnType='submit' />
+        <Button btnText='update group' btnType='submit' />
       </Form>
     </div>
   );
 };
 
-export default CreateGroupForm;
+export default EditGroupForm;

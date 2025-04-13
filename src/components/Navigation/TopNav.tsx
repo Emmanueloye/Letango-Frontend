@@ -12,11 +12,13 @@ const TopNav = () => {
   const { isSidebarOpen } = useAppSelector((state) => state.ui);
 
   // Toggle sidebar class names
-  const showNavLg = isSidebarOpen ? 'lg:w-full lg:ml-0' : 'lg:w-4/5 lg:ml-63';
+  const showNavLg = isSidebarOpen
+    ? 'lg:w-full lg:ml-0'
+    : 'lg:w-[calc(100% - 252px)] lg:ml-63';
 
   return (
     <nav
-      className={`w-screen ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 bg-white z-6 flex items-center`}
+      className={` ml-0 ${showNavLg} h-[66px] border-b-2 border-primary-500 dark:border-amber-500 transition-all duration-700 ease-in-out px-3 sticky top-0 left-0 dark:bg-slate-800 bg-white z-6 flex items-center`}
     >
       <div className='container mx-auto py-2 px-4 flex justify-between items-center'>
         {/* Sidebar toggle menu */}

@@ -23,12 +23,20 @@ const PersonalWallet = () => {
               icon={<MdOutlineAccountBalance />}
             />
           </Link>
-          <Card cardDesc='inflow' balance={50_000} icon={<GiReceiveMoney />} />
-          <Card
-            cardDesc='outflow'
-            balance={30_000}
-            icon={<GiPouringChalice />}
-          />
+          <Link to='/account/personal-wallet/inflows'>
+            <Card
+              cardDesc='inflow'
+              balance={50_000}
+              icon={<GiReceiveMoney />}
+            />
+          </Link>
+          <Link to='/account/personal-wallet/outflows'>
+            <Card
+              cardDesc='outflow'
+              balance={30_000}
+              icon={<GiPouringChalice />}
+            />
+          </Link>
         </div>
         {/* Chart section */}
         <>

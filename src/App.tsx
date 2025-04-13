@@ -16,6 +16,11 @@ import CreateGroup from './pages/userGroupMgt/CreateGroup';
 import KYC from './pages/userGroupMgt/KYC';
 import PersonalWallet from './pages/wallet/PersonalWallet';
 import WalletTransaction from './pages/wallet/WalletTransaction';
+import TransactionFlow from './pages/wallet/TransactionFlow';
+import EditGroup from './pages/userGroupMgt/EditGroup';
+import GroupView from './pages/userGroupMgt/GroupView';
+import CreateGroupRules from './pages/userGroupMgt/CreateGroupRules';
+import ViewGroupRules from './pages/userGroupMgt/ViewGroupRules';
 
 const router = createBrowserRouter([
   {
@@ -51,6 +56,8 @@ const router = createBrowserRouter([
             path: 'transactions',
             element: <WalletTransaction />,
           },
+          { path: 'inflows', element: <TransactionFlow /> },
+          { path: 'outflows', element: <TransactionFlow /> },
         ],
       },
       {
@@ -59,6 +66,16 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <ManageGroup /> },
           { path: 'create-group', element: <CreateGroup /> },
+          { path: 'update-group/:groupId', element: <EditGroup /> },
+          {
+            path: 'view/:groupId',
+
+            children: [
+              { index: true, element: <GroupView /> },
+              { path: 'manage-rules', element: <CreateGroupRules /> },
+              { path: 'view-rules', element: <ViewGroupRules /> },
+            ],
+          },
         ],
       },
       { path: 'kyc', element: <KYC /> },

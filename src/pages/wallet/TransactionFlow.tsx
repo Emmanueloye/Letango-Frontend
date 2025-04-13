@@ -2,17 +2,17 @@ import DateRangeSelector from '../../components/UI/DateRangeSelector';
 import Table from '../../components/UI/Table';
 import TransactionBox from '../../components/UI/TransactionBox';
 
-const WalletTransaction = () => {
+const TransactionFlow = () => {
   return (
     <>
       {/* Date selector */}
       <DateRangeSelector />
-      {/* table */}
+      {/* Table */}
       <div className='hidden lg:block'>
         <h4 className='text-center mt-8 font-600'>Transaction history</h4>
         <Table
-          columns='1fr 2fr 1fr 1fr'
-          headers={['date', 'description', 'debit', 'credit']}
+          columns='1fr 2fr 1fr'
+          headers={['date', 'description', 'inflow']}
         >
           <>
             <p className='border border-gray-300'>April 12, 2025: 11:45pm</p>
@@ -20,11 +20,10 @@ const WalletTransaction = () => {
               transaction description goes here
             </p>
             <p className='border border-gray-300'>&#8358;20,000</p>
-            <p className='border border-gray-300'>&#8358;0.00</p>
           </>
         </Table>
       </div>
-      {/* transaction cards */}
+      {/* Transaction cards */}
       <div className='block lg:hidden'>
         <h4 className='text-center mt-8 font-600'>Transaction history</h4>
         <TransactionBox
@@ -50,4 +49,4 @@ const WalletTransaction = () => {
   );
 };
 
-export default WalletTransaction;
+export default TransactionFlow;
