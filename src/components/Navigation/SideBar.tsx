@@ -54,6 +54,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             Dashboard
           </NavLink>
@@ -64,6 +65,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             Personal Profile
           </NavLink>
@@ -74,6 +76,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             Personal Wallet
           </NavLink>
@@ -84,6 +87,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             KYC
           </NavLink>
@@ -94,6 +98,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             Manage Group
           </NavLink>
@@ -104,6 +109,7 @@ const SideBar = () => {
             className={({ isActive }) =>
               isActive ? 'block font-700' : 'block'
             }
+            onClick={() => dispatch(dashboardActions.closeSidebar())}
           >
             Reports
           </NavLink>
