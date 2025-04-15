@@ -21,6 +21,7 @@ import EditGroup from './pages/userGroupMgt/EditGroup';
 import GroupView from './pages/userGroupMgt/GroupView';
 import CreateGroupRules from './pages/userGroupMgt/CreateGroupRules';
 import ViewGroupRules from './pages/userGroupMgt/ViewGroupRules';
+import BeneficiaryDetails from './pages/userGroupMgt/BeneficiaryDetails';
 
 const router = createBrowserRouter([
   {
@@ -74,6 +75,7 @@ const router = createBrowserRouter([
               { index: true, element: <GroupView /> },
               { path: 'manage-rules', element: <CreateGroupRules /> },
               { path: 'view-rules', element: <ViewGroupRules /> },
+              { path: 'beneficiaries', element: <BeneficiaryDetails /> },
             ],
           },
         ],

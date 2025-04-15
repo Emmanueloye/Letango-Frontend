@@ -1,10 +1,12 @@
 import { Form } from 'react-router-dom';
 import Title from '../UI/Title';
 import Button from '../UI/Button';
+import LinkBtn from '../UI/LinkBtn';
 
 const EditGroupForm = () => {
   return (
     <div className='w-full lg:w-4/5 lg:mx-auto bg-gray-100 dark:bg-slate-800 p-2.5 lg:p-4 rounded-lg'>
+      <LinkBtn btnText='back' url='/account/manage-group' />
       {/* Form title */}
       <Title title='update group' />
       <Form id='updateGroup'>

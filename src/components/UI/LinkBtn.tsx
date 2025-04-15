@@ -14,7 +14,7 @@ const LinkBtn = ({
   return (
     <Link
       to={url}
-      className={`bg-${bg} hover:bg-green-400 px-3 py-1 rounded-md capitalize ${color} font-600`}
+      className={`bg-${bg} flex items-center hover:bg-green-400 px-3 py-1 rounded-md capitalize ${color} font-600`}
     >
       {btnText}
     </Link>
