@@ -25,26 +25,26 @@ const GroupView = () => {
           <span className='font-600 text-green-600'>&#8358;20,000</span>
         </div>
 
-        <LinkBtn btnText='report' url='/account/manage-group/view/1' />
+        <LinkBtn btnText='report' url='/account/manage-group/view/1/reports' />
       </div>
       {/* Group action buttons/links */}
-      <div className='flex gap-3 mt-4'>
-        <div className='flex gap-3 text-sm'>
-          <div>
-            <Button btnText='contribute' btnType='button' />
-          </div>
-          <div>
-            <Button btnText='payout' btnType='button' />
-          </div>
-          <div>
-            <Button btnText='share group' btnType='button' />
-          </div>
+
+      <div className='flex flex-wrap gap-3 mt-4 text-sm'>
+        <div>
+          <Button btnText='contribute' btnType='button' />
+        </div>
+        <div>
+          <Button btnText='payout' btnType='button' />
+        </div>
+        <div>
+          <Button btnText='share group' btnType='button' />
         </div>
         <LinkBtn
           btnText='manage beneficiaries'
           url='/account/manage-group/view/1/beneficiaries'
         />
       </div>
+
       {/* Main body */}
       <div className='lg:flex lg:gap-3 relative mt-6'>
         <main className='lg:basis-3/5 basis-full'>

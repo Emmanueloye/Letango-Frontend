@@ -22,6 +22,9 @@ import GroupView from './pages/userGroupMgt/GroupView';
 import CreateGroupRules from './pages/userGroupMgt/CreateGroupRules';
 import ViewGroupRules from './pages/userGroupMgt/ViewGroupRules';
 import BeneficiaryDetails from './pages/userGroupMgt/BeneficiaryDetails';
+import GroupReportLanding from './pages/report/GroupReportLanding';
+import GroupTransactions from './pages/report/GroupTransactions';
+import GroupStatement from './pages/report/GroupStatement';
 
 const router = createBrowserRouter([
   {
@@ -76,6 +79,14 @@ const router = createBrowserRouter([
               { path: 'manage-rules', element: <CreateGroupRules /> },
               { path: 'view-rules', element: <ViewGroupRules /> },
               { path: 'beneficiaries', element: <BeneficiaryDetails /> },
+              {
+                path: 'reports',
+                children: [
+                  { index: true, element: <GroupReportLanding /> },
+                  { path: 'transaction', element: <GroupTransactions /> },
+                  { path: 'statement', element: <GroupStatement /> },
+                ],
+              },
             ],
           },
         ],
