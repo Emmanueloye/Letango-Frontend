@@ -37,7 +37,7 @@ const GroupView = () => {
           <Button btnText='payout' btnType='button' />
         </div>
         <div>
-          <Button btnText='share group' btnType='button' />
+          <Button btnText='invite members' btnType='button' />
         </div>
         <LinkBtn
           btnText='manage beneficiaries'

@@ -22,8 +22,6 @@ const Chart: React.FC<ChartData> = ({
   dataKeys,
   barColors,
 }) => {
-  console.log(data);
-
   return (
     <div className='mt-8 w-full'>
       <ResponsiveContainer width={'100%'} height={300}>

@@ -25,6 +25,16 @@ import BeneficiaryDetails from './pages/userGroupMgt/BeneficiaryDetails';
 import GroupReportLanding from './pages/report/GroupReportLanding';
 import GroupTransactions from './pages/report/GroupTransactions';
 import GroupStatement from './pages/report/GroupStatement';
+import UserManager from './pages/admin/usersManager/UserManager';
+import GroupManager from './pages/admin/groupManager/GroupManager';
+import OpenWithdrawals from './pages/admin/withdrawals/OpenWithdrawals';
+import ClosedWithdrawals from './pages/admin/withdrawals/ClosedWithdrawals';
+import Statements from './pages/admin/Statements';
+import EditUser from './pages/admin/usersManager/EditUser';
+import ViewUser from './pages/admin/usersManager/ViewUser';
+import EditAdminGroup from './pages/admin/groupManager/EditAdminGroup';
+import ViewAdminGroup from './pages/admin/groupManager/ViewAdminGroup';
+import WithdrawalLanding from './pages/admin/withdrawals/WithdrawalLanding';
 
 const router = createBrowserRouter([
   {
@@ -92,7 +102,41 @@ const router = createBrowserRouter([
         ],
       },
       { path: 'kyc', element: <KYC /> },
-      { path: 'reports', element: <p>reports</p> },
+      {
+        path: 'admin',
+        children: [
+          { index: true, element: <p>admin</p> },
+          {
+            path: 'user-manager',
+            children: [
+              { index: true, element: <UserManager /> },
+              { path: 'edit/:id', element: <EditUser /> },
+              {
+                path: 'view/:id',
+                element: <ViewUser />,
+              },
+            ],
+          },
+          {
+            path: 'group-manager',
+            children: [
+              { index: true, element: <GroupManager /> },
+              { path: 'edit/:id', element: <EditAdminGroup /> },
+              { path: 'view/:id', element: <ViewAdminGroup /> },
+            ],
+          },
+          {
+            path: 'withdrawals',
+            children: [
+              { index: true, element: <WithdrawalLanding /> },
+              { path: 'open', element: <OpenWithdrawals /> },
+              { path: 'closed', element: <ClosedWithdrawals /> },
+            ],
+          },
+          { path: 'closed-withdrawals', element: <ClosedWithdrawals /> },
+          { path: 'statement', element: <Statements /> },
+        ],
+      },
     ],
   },
 ]);

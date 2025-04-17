@@ -11,17 +11,17 @@ const Table = ({
     // Table headers
     <div className='mt-2'>
       <div
-        className='grid uppercase text-sm font-600 *:py-2 *:px-2 bg-green-100 dark:text-primary-500'
+        className='grid uppercase text-sm font-600 *:py-2 *:px-2 bg-[#dcfce7] dark:text-primary-500'
         style={{ gridTemplateColumns: columns }}
       >
         {headers.map((item) => (
-          <p key={item} className='border border-gray-300'>
+          <p key={item} className='border border-[#d1d5dc]'>
             {item}
           </p>
         ))}
       </div>
       {/* Table rows */}
-      <div className='*:even:bg-slate-100 *:dark:even:bg-slate-700'>
+      <div className='*:even:bg-[#f1f5f9] *:dark:even:bg-[#314158]'>
         <div
           className='grid grid-cols-4 items-stretch capitalize text-sm font-400 font-poppins *:py-1 *:px-2'
           style={{ gridTemplateColumns: columns }}

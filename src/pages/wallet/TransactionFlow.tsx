@@ -1,11 +1,16 @@
 import DateRangeSelector from '../../components/UI/DateRangeSelector';
+import LinkBtn from '../../components/UI/LinkBtn';
 import Table from '../../components/UI/Table';
 import TransactionBox from '../../components/UI/TransactionBox';
 
 const TransactionFlow = () => {
   return (
     <>
+      <div className='flex justify-end mb-4'>
+        <LinkBtn btnText='back' url='/account/personal-wallet' />
+      </div>
       {/* Date selector */}
+
       <DateRangeSelector />
       {/* Table */}
       <div className='hidden lg:block'>

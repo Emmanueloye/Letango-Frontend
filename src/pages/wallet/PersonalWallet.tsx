@@ -4,6 +4,7 @@ import { GiPouringChalice, GiReceiveMoney } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Chart from '../../components/DashboardComponents/Chart';
 import { walletData } from '../../assets/tempData/chartData';
+import Button from '../../components/UI/Button';
 
 // data type
 interface DataType {
@@ -37,6 +38,12 @@ const PersonalWallet = () => {
               icon={<GiPouringChalice />}
             />
           </Link>
+        </div>
+        {/* personal wallet btns */}
+        <div className='flex gap-3 mt-4 mb-3'>
+          <Button btnText='contribute' btnType='button' />
+          <Button btnText='transfer' btnType='button' />
+          <Button btnText='place withdrawal' btnType='button' />
         </div>
         {/* Chart section */}
         <>
