@@ -1,3 +1,5 @@
+import { formatNumber } from '../../helperFunc.ts/utilsFunc';
+
 const TransactionBox = ({
   description,
   date,
@@ -18,7 +20,9 @@ const TransactionBox = ({
         <p className='text-xs  text-gray-500 dark:text-gray-400'>{date}</p>
         <p className='text-xs  text-gray-500 dark:text-gray-400'>{time}</p>
       </div>
-      <p className='text-sm font-500 break-words'>&#8358;{amount}</p>
+      <p className='text-sm font-500 break-words'>
+        &#8358;{formatNumber(amount)}
+      </p>
     </div>
   );
 };
