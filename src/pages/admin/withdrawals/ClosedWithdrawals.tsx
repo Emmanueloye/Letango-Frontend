@@ -13,7 +13,7 @@ const ClosedWithdrawals = () => {
         {/* First */}
         <div className='relative'>
           <div className='absolute right-0'>
-            <input type='checkbox' id='checkbox' checked />
+            <input type='checkbox' id='checkbox' defaultChecked />
           </div>
           <TransactionBox
             description='payment to Jan contributor'
@@ -25,7 +25,7 @@ const ClosedWithdrawals = () => {
         {/* Second */}
         <div className='relative'>
           <div className='absolute right-0'>
-            <input type='checkbox' id='checkbox-2' checked />
+            <input type='checkbox' id='checkbox-2' defaultChecked />
           </div>
           <TransactionBox
             description='payment to Jan contributor'
