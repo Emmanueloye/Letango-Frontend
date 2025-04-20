@@ -164,7 +164,7 @@ const SideBar = () => {
 
         <li className='mb-2 p-1'>
           <NavLink
-            to='/account/admin/statement'
+            to='/account/admin/kyc-review'
             className={({ isActive }) =>
               isActive ? 'block font-700 capitalize' : 'block capitalize'
             }
@@ -185,6 +185,9 @@ const SideBar = () => {
           </NavLink>
         </li>
       </ul>
+      <div className='text-[10px]'>
+        <small>Developed by Oyediran Emmanuel</small>
+      </div>
     </aside>
   );
 };

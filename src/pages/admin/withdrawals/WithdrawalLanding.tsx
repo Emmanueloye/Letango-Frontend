@@ -12,28 +12,37 @@ const withdrawalData = [
 
 const WithdrawalLanding = () => {
   return (
-    <div className='grid md:grid-cols-2 gap-4'>
-      <Link to='/account/admin/withdrawals/open'>
-        <Card
-          cardDesc='open withdrawals'
-          balance={30_000}
-          icon={<FaBoxOpen />}
-        />
-      </Link>
-      <Link to='/account/admin/withdrawals/closed'>
-        <Card
-          cardDesc='closed withdrawals'
-          balance={30_000}
-          icon={<FaLock />}
-        />
-      </Link>
+    <>
+      <div className='grid md:grid-cols-3 gap-4'>
+        <Link to='/account/admin/withdrawals/open'>
+          <Card
+            cardDesc='open withdrawals'
+            balance={30_000}
+            icon={<FaBoxOpen />}
+          />
+        </Link>
+        <Link to='/account/admin/withdrawals/closed'>
+          <Card
+            cardDesc='closed withdrawals'
+            balance={30_000}
+            icon={<FaLock />}
+          />
+        </Link>
+        <Link to='/account/admin/withdrawals/pending'>
+          <Card
+            cardDesc='awaiting approval'
+            balance={30_000}
+            icon={<FaLock />}
+          />
+        </Link>
+      </div>
       <Chart
         data={withdrawalData}
         xAxisName='name'
         dataKeys={['amount']}
         barColors={['#00b6d4']}
       />
-    </div>
+    </>
   );
 };
 

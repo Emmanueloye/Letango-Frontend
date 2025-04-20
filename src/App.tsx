@@ -29,12 +29,14 @@ import UserManager from './pages/admin/usersManager/UserManager';
 import GroupManager from './pages/admin/groupManager/GroupManager';
 import OpenWithdrawals from './pages/admin/withdrawals/OpenWithdrawals';
 import ClosedWithdrawals from './pages/admin/withdrawals/ClosedWithdrawals';
-import Statements from './pages/admin/Statements';
+import Statements from './pages/report/Statements';
 import EditUser from './pages/admin/usersManager/EditUser';
 import ViewUser from './pages/admin/usersManager/ViewUser';
 import EditAdminGroup from './pages/admin/groupManager/EditAdminGroup';
 import ViewAdminGroup from './pages/admin/groupManager/ViewAdminGroup';
 import WithdrawalLanding from './pages/admin/withdrawals/WithdrawalLanding';
+import PendingWithdrawals from './pages/admin/withdrawals/PendingWithdrawals';
+import KYCReview from './pages/admin/usersManager/KYCReview';
 
 const router = createBrowserRouter([
   {
@@ -131,9 +133,11 @@ const router = createBrowserRouter([
               { index: true, element: <WithdrawalLanding /> },
               { path: 'open', element: <OpenWithdrawals /> },
               { path: 'closed', element: <ClosedWithdrawals /> },
+              { path: 'pending', element: <PendingWithdrawals /> },
             ],
           },
           { path: 'closed-withdrawals', element: <ClosedWithdrawals /> },
+          { path: 'kyc-review', element: <KYCReview /> },
           { path: 'statement', element: <Statements /> },
         ],
       },

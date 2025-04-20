@@ -5,13 +5,17 @@ const TableAction = ({
   editUrl,
   viewUrl,
   showUserAction = false,
+  className,
 }: {
   editUrl: string;
   viewUrl: string;
   showUserAction?: boolean;
+  className?: string;
 }) => {
   return (
-    <div className=' flex items-center gap-2 border border-[#d1d5dc]'>
+    <div
+      className={`flex items-center gap-2 border border-[#d1d5dc] ${className}`}
+    >
       <Link
         to={editUrl}
         className='bg-amber-600 p-2 rounded-full text-slate-50'
