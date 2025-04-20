@@ -45,14 +45,14 @@ const TopNav = () => {
           {/* Dropdown menu */}
           <div className='relative'>
             <div
-              className='flex items-center cursor-pointer'
+              className='flex items-center cursor-pointer authbox'
               onClick={() => setIsAuthMenuOpen(!isAuthMenuOpen)}
             >
-              <span className='mt-1 dark:text-slate-50'>
+              <span className='mt-1 dark:text-slate-50 authbox'>
                 {`Osunkoya`.charAt(0).toUpperCase()}
                 {`mayowa`.charAt(0).toUpperCase()}
               </span>
-              <FaAngleDown className='mt-1 dark:text-slate-50' />
+              <FaAngleDown className='mt-1 dark:text-slate-50 authbox' />
             </div>
             {/* Dropdown menu for profile */}
             <ul
