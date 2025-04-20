@@ -37,6 +37,7 @@ import ViewAdminGroup from './pages/admin/groupManager/ViewAdminGroup';
 import WithdrawalLanding from './pages/admin/withdrawals/WithdrawalLanding';
 import PendingWithdrawals from './pages/admin/withdrawals/PendingWithdrawals';
 import KYCReview from './pages/admin/usersManager/KYCReview';
+import ReportUser from './pages/userGroupMgt/ReportUser';
 
 const router = createBrowserRouter([
   {
@@ -104,6 +105,7 @@ const router = createBrowserRouter([
         ],
       },
       { path: 'kyc', element: <KYC /> },
+      { path: 'report-user', element: <ReportUser /> },
       {
         path: 'admin',
         children: [
